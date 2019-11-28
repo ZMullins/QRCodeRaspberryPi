@@ -2,13 +2,15 @@
 #include <iostream>
 #include <fstream>
 #include <string>
+//g++ -I/usr/include/python2.7 -lpython2.7 testworked.cpp
+
 int
 main(int argc, char *argv[])
 {
   Py_SetProgramName(argv[0]);  /* optional but recommended */
   Py_Initialize();
-  FILE *fd = fopen("qr.py", "r");
-  PyRun_SimpleFileEx(fd, "qr.py", 1);
+  FILE *fd = fopen("qrlive.py", "r");
+  PyRun_SimpleFileEx(fd, "qrlive.py", 1);
   Py_Finalize();
   
 
